@@ -1,0 +1,124 @@
+ <layer height="480" name="sportClimbStatusLayer" width="480">
+            <action input_event="gre.gesture.right" type="gra.ccallback">
+                <arg k="function">_handleGestureEvent</arg>
+            </action>
+            <control active="1" enable_mask="0" height="480" hidden="0" name="BgControl" opaque="1" width="480" x="0" y="0">
+                <render handler="fill">
+                    <arg k="color">0x0</arg>
+                    <arg k="halign">1</arg>
+                    <arg k="valign">1</arg>
+                </render>
+            </control>
+            <control active="1" enable_mask="0" height="88" hidden="0" name="ButttonControl2" opaque="1" width="360" x="60" y="250">
+                <data format="4s1" key="alpha" value="0"/>
+                <data format="1s0" key="button2Text" value="Try"/>
+                <data format="4s1" key="color" value="0x333333"/>
+                <data format="4s1" key="colorFill" value="0x0"/>
+                <action input_event="gre.touch" type="gra.ccallback">
+                    <arg k="function">_handleTouchEvent</arg>
+                </action>
+                <action input_event="gre.press" type="gra.ccallback">
+                    <arg k="function">_handleTouchEvent</arg>
+                </action>
+                <action input_event="gre.release" type="gra.ccallback">
+                    <arg k="function">_handleTouchEvent</arg>
+                </action>
+                <action input_event="gre.outbound" type="gra.datachange">
+                    <arg k="${control:alpha}">0</arg>
+                </action>
+                <action input_event="gre.press" type="gra.datachange">
+                    <arg k="${control:alpha}">178</arg>
+                </action>
+                <action input_event="gre.release" type="gra.datachange">
+                    <arg k="${control:alpha}">0</arg>
+                </action>
+                <action input_event="gre.keypress" type="gra.datachange">
+                    <arg k="${control:alpha}">178</arg>
+                </action>
+                <action input_event="gre.keyrelease" type="gra.datachange">
+                    <arg k="${control:alpha}">0</arg>
+                </action>
+                <render handler="rectangle">
+                    <arg k="ah">44</arg>
+                    <arg k="aw">44</arg>
+                    <arg k="color">${control:color}</arg>
+                    <arg k="halign">1</arg>
+                    <arg k="valign">1</arg>
+                </render>
+                <render handler="text">
+                    <arg k="color">0xffffff</arg>
+                    <arg k="font">fonts/allfont-Medium.ttf</arg>
+                    <arg k="halign">2</arg>
+                    <arg k="line-height">87</arg>
+                    <arg k="overflow">wrap</arg>
+                    <arg k="size">36</arg>
+                    <arg k="style">1</arg>
+                    <arg k="text">${control:button2Text}</arg>
+                    <arg k="valign">2</arg>
+                </render>
+                <render handler="fill">
+                    <arg k="ah">44</arg>
+                    <arg k="alpha">${control:alpha}</arg>
+                    <arg k="aw">44</arg>
+                    <arg k="color">${control:colorFill}</arg>
+                    <arg k="halign">1</arg>
+                    <arg k="valign">1</arg>
+                </render>
+            </control>
+            <control active="1" enable_mask="0" height="88" hidden="0" name="ButttonControl1" opaque="1" width="360" x="60" y="142">
+                <data format="4s1" key="alpha" value="0"/>
+                <data format="1s0" key="button1Text" value="Done"/>
+                <data format="4s1" key="color" value="0x333333"/>
+                <data format="4s1" key="colorFill" value="0x0"/>
+                <action input_event="gre.touch" type="gra.ccallback">
+                    <arg k="function">_handleTouchEvent</arg>
+                </action>
+                <action input_event="gre.outbound" type="gra.datachange">
+                    <arg k="${control:alpha}">0</arg>
+                </action>
+                <action input_event="gre.press" type="gra.ccallback">
+                    <arg k="function">_handleTouchEvent</arg>
+                </action>
+                <action input_event="gre.release" type="gra.ccallback">
+                    <arg k="function">_handleTouchEvent</arg>
+                </action>
+                <action input_event="gre.press" type="gra.datachange">
+                    <arg k="${control:alpha}">178</arg>
+                </action>
+                <action input_event="gre.release" type="gra.datachange">
+                    <arg k="${control:alpha}">0</arg>
+                </action>
+                <action input_event="gre.keypress" type="gra.datachange">
+                    <arg k="${control:alpha}">178</arg>
+                </action>
+                <action input_event="gre.keyrelease" type="gra.datachange">
+                    <arg k="${control:alpha}">0</arg>
+                </action>
+                <render handler="rectangle">
+                    <arg k="ah">44</arg>
+                    <arg k="aw">44</arg>
+                    <arg k="color">${control:color}</arg>
+                    <arg k="halign">1</arg>
+                    <arg k="valign">1</arg>
+                </render>
+                <render handler="text">
+                    <arg k="color">0xffffff</arg>
+                    <arg k="font">fonts/allfont-Medium.ttf</arg>
+                    <arg k="halign">2</arg>
+                    <arg k="line-height">87</arg>
+                    <arg k="overflow">wrap</arg>
+                    <arg k="size">36</arg>
+                    <arg k="style">1</arg>
+                    <arg k="text">${control:button1Text}</arg>
+                    <arg k="valign">2</arg>
+                </render>
+                <render handler="fill">
+                    <arg k="ah">44</arg>
+                    <arg k="alpha">${control:alpha}</arg>
+                    <arg k="aw">44</arg>
+                    <arg k="color">${control:colorFill}</arg>
+                    <arg k="halign">1</arg>
+                    <arg k="valign">1</arg>
+                </render>
+            </control>
+        </layer>
