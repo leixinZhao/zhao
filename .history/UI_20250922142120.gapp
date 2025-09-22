@@ -1,0 +1,27 @@
+ <layer height="480" name="sportDataEditLayerEg" width="480"/>
+            <group hidden="0" name="TrainingGroup" x="0" y="0">
+                <controls>
+                    <control active="1" enable_mask="0" height="480" hidden="1" name="mask" opaque="1" width="480" x="0" y="0">
+                        <render handler="fill">
+                            <arg k="color">0x666666</arg>
+                            <arg k="halign">1</arg>
+                            <arg k="valign">1</arg>
+                        </render>
+                    <control active="1" enable_mask="0" height="80" hidden="1" name="sportEgBtn" opaque="1" width="480" x="0" y="0">
+                        <data format="4s1" key="fontSize" value="48"/>//
+                        <data format="4s1" key="vAlign" value="1"/>
+                        <data format="1s0" key="font" value="fonts/huamifont.ttf"/>
+                        <render handler="text">
+                            <arg k="color">0xffffff</arg>
+                            <arg k="font">${control:font}</arg>
+                            <arg k="halign">1</arg>
+                            <arg k="overflow">none</arg>
+                            <arg k="line-height">87</arg>
+                            <arg k="size">48</arg>
+                            <arg k="style">1</arg>
+                            <arg k="text">0</arg>
+                            <arg k="valign">1</arg>
+                        </render>
+                    </control>
+                </controls>
+            </group>
